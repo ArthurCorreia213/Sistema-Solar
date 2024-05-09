@@ -1,0 +1,574 @@
+/* 
+alterações básicas para o inicio da construção: */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(https://i.gifer.com/WBVk.gif);
+    width: 100vw;
+    height: 50%;
+    font-family: sans-serif;
+}
+
+/* personalização do menu lateral: */
+
+nav.menu-lateral{
+    width: 112px;
+    height: 100%;
+    background-color: black;
+    padding: 40px 0 40px 1%;
+    box-shadow: 3px 0 0 blueviolet;
+    overflow: hidden;
+    transition: .4s;
+    }
+nav.menu-lateral.expandir{
+    width: 300px;
+}
+
+.btn-expandir{
+    width: 100%;
+    padding-left: 10px;
+}
+
+ul{
+    height: 100%;
+}
+
+ul li.ativo{
+    margin-right: 5px;
+    background-color: blueviolet;
+}
+
+.tudo ul li.item-menu a{
+    z-index: 10;
+}
+
+ul li.item-menu a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    margin-top: 25px;
+    margin-right: 5px;
+    /* padding: 20px 4%; */
+    padding-top: 14px;
+    padding-left: 4px;
+    display: flex;
+    line-height: 48px;
+    border: 1px solid blueviolet;
+}
+
+ul li.item-menu .txt-link{
+    margin-left: 30px;
+}
+
+ul li.item-menu img{
+    width: 50px;
+    height: 50px;
+    margin-left: 12px;
+}
+
+ul li.item-menu:hover{
+    margin-right: 5px;
+    background-color: blueviolet;
+    transition: .4s;
+}
+
+button{
+    width: 50px;
+    height: 50px;
+    border: 2px solid white;
+    border-radius: 5px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.linha{
+    width: 28px;
+    height: 2px;
+    background-color: white;
+    display: block;
+    margin: 5px auto;
+    position: relative;
+    transform-origin: center;
+    transition: 0.2s;
+}
+
+button.ativar{
+    border: 2px solid red;
+}
+
+button.ativar .linha:nth-child(1){
+    transform: translateY(7px) rotate(-45deg);
+    background-color: red;
+}
+
+button.ativar .linha:nth-child(3){
+    transform: translateY(-7px) rotate(45deg);
+    background-color: red;
+}
+
+button.ativar .linha:nth-child(2){
+    width: 0;
+}
+
+/* inicio da construção do sistema solar em si: */
+
+.sistema-solar{
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -75vh;
+}
+
+.sol{
+    width: 12em;
+    height: 12em;
+    background: url(img3/Sol.jpg);
+    box-shadow: 0 0 5em rgb(236, 145, 9);
+    position: relative;
+    animation: rotate 10s linear infinite;
+}
+
+.mercurio{
+    background: url(img3/mercurio.jpg);
+    box-shadow: inset -0.5em -0.5em 0.5em #000, -0.4em -0.4em 0.6em #ccc;
+    width: 3em;
+    height: 3em;
+    position: absolute;
+    left: -5em;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: rotate 5s linear infinite, mercurio 16s infinite ease-in-out;
+    z-index: 1;
+}
+
+.venus{
+    background: url(img3/venus.jpg);
+    box-shadow: inset -0.6em -0.6em 0.6em #000, -0.3em -0.3em 0.6em #ccc;
+    width: 4em;
+    height: 4em;
+    position: absolute;
+    left: -10em;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: rotate 5s linear infinite, venus 28s infinite ease-in-out;
+    z-index: 2;
+}
+
+.terra{
+    background: url(img3/terra.jpg);
+    box-shadow: inset -0.8em -0.8em 0.8em #000, -0.4em -0.4em 0.7em #ccc;
+    width: 5em;
+    height: 5em;
+    position: absolute;
+    left: -16em;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: rotate 5s linear infinite, terra 40s infinite ease-in-out;
+    z-index: 3;
+}
+
+.marte{
+    background: url(img3/marte.jpg);
+    box-shadow: inset -0.6em -0.6em 0.6em #000, -0.3em -0.3em 0.6em #ccc;
+    width: 4em;
+    height: 4em;
+    position: absolute;
+    left: -21em;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: rotate 5s linear infinite, marte 52s infinite ease-in-out;
+    z-index: 4;
+}
+
+.jupiter{
+    background: url(img3/jupiter.jpg);
+    box-shadow: inset -1em -1em 1em #000, -0.5em -0.5em 0.8em #ccc;
+    width: 7em;
+    height: 7em;
+    position: absolute;
+    left: -29em;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: rotate 5s linear infinite, jupiter 64s infinite ease-in-out;
+    z-index: 5;
+}
+
+.saturno{
+    background: url(img3/saturno.jpg);
+    box-shadow: inset -0.6em -0.6em 0.6em #000, -0.3em -0.3em 0.6em #ccc;
+    width: 6em;
+    height: 6em;
+    position: absolute;
+    left: -37em;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: rotate 5s linear infinite, saturno 76s infinite ease-in-out;
+    z-index: 6;
+}
+
+.urano{
+    background: url(img3/urano.jpg);
+    box-shadow: inset -0.4em -0.4em 0.4em #000, -0.3em -0.3em 0.6em #ccc;
+    width: 4em;
+    height: 4em;
+    position: absolute;
+    left: -42em;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: rotate 5s linear infinite, urano 88s infinite ease-in-out;
+    z-index: -1;
+}
+
+.netuno{
+    background: url(img3/netuno.jpg);
+    box-shadow: inset -0.5em -0.5em 0.5em #000, -0.4em -0.4em 0.6em #ccc;
+    width: 5em;
+    height: 5em;
+    position: absolute;
+    left: -48em;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: rotate 5s linear infinite, netuno 100s infinite ease-in-out;
+    z-index: -1;
+}
+
+.sol, .mercurio, .venus, .terra, .marte, .jupiter, .saturno, .urano, .netuno{
+    border-radius: 50%;
+    background-repeat: repeat;
+    background-size: 200% 100%;
+}
+
+/* acrescentando o "et bilu": */
+
+.decoracoes{
+    display: flex;
+    justify-content: center;
+}
+
+.et{
+    position: absolute;
+    top: 100px;
+    left: 1200px;
+    animation: balanco 2s alternate infinite;
+}
+
+.et:hover .texto-overlay {
+    opacity: 1; 
+}
+.texto-overlay {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* cor de fundo com transparência */
+    color: rgb(192, 255, 226);
+    font-size: 20px;
+    padding-left: 100px; /* ajuste conforme necessário para centralizar o texto */
+    opacity: 0; /* torna o texto invisível inicialmente */
+    transition: opacity 0.3s ease; /* adiciona uma transição suave */
+}
+
+.feito-por{
+    position: absolute;
+    text-align: center;
+    top: 2vh;
+    left: 46%;
+    color: white;
+}
+
+.feito-por:hover .informacoes{
+    opacity: 1;
+}
+
+.informacoes{
+    text-align: center;
+    margin-top: 10px;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.informacoes p{
+    margin-bottom: 3px;
+    cursor: pointer;
+}
+
+.informacoes a{
+    color: white;
+    text-decoration: none;
+}
+
+.nave {
+    position: absolute;
+    bottom: 20px; /* Posição inicial vertical */
+    left: -150px; /* Posição inicial horizontal */
+    animation: balanco 10s linear infinite alternate; /* Animação de balanço */
+}
+
+@keyframes balanco {
+    from{margin-left: 0;}
+    to{margin-right: 20px;}
+}
+
+@keyframes balanco{
+    from{top: 100px;}
+    to{top: 120px;}
+}
+
+@keyframes rotate {
+    to{ background-position: -200% 0;}
+}
+
+@keyframes mercurio {
+    49% {z-index: 1;
+    }
+
+    50% {left: 14em;
+        z-index: -1;
+    }
+
+    99%{z-index: -1;
+    }
+
+    100%{
+        left: -5em;
+        z-index: 1;
+        }
+
+}
+
+@keyframes venus {
+    49% {z-index: 2;}
+    50% {left: 19em;
+        z-index: -2;
+    }
+    99%{z-index: -2;}
+    100%{
+        left: -10em;
+        z-index: 2;
+    }
+}
+
+@keyframes terra {
+    49% {z-index: 3;}
+    50% {left: 22em;
+        z-index: -3;
+    }
+    99%{z-index: -3;}
+    100%{
+        left: -16em;
+        z-index: 3;
+    }
+}
+
+@keyframes marte {
+    49% {z-index: 4;}
+    50% {left: 27em;
+        z-index: -4;
+    }
+    99%{z-index: -4;}
+    100%{
+        left: -21em;
+        z-index: 4;
+    }
+}
+
+@keyframes jupiter {
+    49% {z-index: 5;}
+    50% {left: 35em;
+        z-index: -5;
+    }
+    99%{z-index: -5;}
+    100%{
+        left: -29em;
+        z-index: 5;
+    }
+}
+
+@keyframes saturno {
+    49% {z-index: 6;}
+    50% {left: 43em;
+        z-index: -6;
+    }
+    99%{z-index: -6;}
+    100%{
+        left: -37em;
+        z-index: -1;
+    }
+}
+
+@keyframes urano { 
+    49% {z-index: 7;}
+    50% {left: 48em;
+        z-index: -7;
+    }
+    99%{z-index: -7;}
+    100%{
+        left: -42em;
+        z-index: -1;
+    }
+}
+
+@keyframes netuno {
+    49% {z-index: 8;}
+    50% {left: 54em;
+        z-index: -8;
+    }
+    99%{z-index: -8;}
+    100%{
+        left: -48em;
+        z-index: -1;
+    }
+}
+
+/* configurando e colocando o card: */
+
+.item-menu{
+    position: "" ;
+    z-index: 1;
+
+}
+
+.card-menu{
+    border: 6px solid rgb(0, 34, 255);
+    padding-right: 42px;
+    margin-bottom: 5px;
+}
+
+.card-menu:hover{
+    border: 3px solid rgb(125, 70, 255);
+}
+
+#modal-sol,
+#modal-mercurio,
+#modal-venus,
+#modal-terra,
+#modal-marte,
+#modal-jupiter,
+#modal-saturno,
+#modal-urano,
+#modal-netuno {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+    max-width: 300px;
+    z-index: 9998;
+}
+
+#modal-sol p,
+#modal-mercurio p,
+#modal-venus p,
+#modal-terra p,
+#modal-marte p,
+#modal-jupiter p,
+#modal-saturno p,
+#modal-urano p,
+#modal-netuno p {
+    display: block;
+    font-family: Arial;
+    margin: 5px 0px 20px 0px;
+}
+
+#modal-sol img,
+#modal-mercurio img,
+#modal-venus img,
+#modal-terra img,
+#modal-marte img,
+#modal-jupiter img,
+#modal-saturno img,
+#modal-urano img,
+#modal-netuno img {
+    display: block;
+    border: 5px solid #f7f7f7;
+}
+
+#ativar-checkbox-sol:checked ~ #modal-sol,
+#ativar-checkbox-mercurio:checked ~ #modal-mercurio,
+#ativar-checkbox-venus:checked ~ #modal-venus,
+#ativar-checkbox-terra:checked ~ #modal-terra,
+#ativar-checkbox-marte:checked ~ #modal-marte,
+#ativar-checkbox-jupiter:checked ~ #modal-jupiter,
+#ativar-checkbox-saturno:checked ~ #modal-saturno,
+#ativar-checkbox-urano:checked ~ #modal-urano,
+#ativar-checkbox-netuno:checked ~ #modal-netuno {
+    display: block;
+}
+
+
+#ativar-checkbox,
+#ativar-checkbox-mercurio,
+#ativar-checkbox-venus,
+#ativar-checkbox-terra,
+#ativar-checkbox-marte,
+#ativar-checkbox-jupiter,
+#ativar-checkbox-saturno,
+#ativar-checkbox-urano,
+#ativar-checkbox-netuno{
+    display: none;
+}
+
+#modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+    max-width: 300px;
+    z-index: 9998;
+}
+
+#modal p {
+    display: block;
+    font-family: Arial;
+    margin: 5px 0px 20px 0px;
+}
+
+#modal img {
+    display: block;
+    border: 5px solid #f7f7f7;
+}
+
+
+
+#ativar-checkbox:checked ~ #modal {
+    display: block;
+}
+
+
+.rodape{
+    background-color: #0e0018;
+    border-top: blueviolet  solid 2px;
+    margin-top: -195px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.fundo h2, h3, h4{
+    color: #ccc;
+}
+
+ul{
+    list-style-type: none ;
+}

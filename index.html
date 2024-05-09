@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Solar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>  
+    <nav class="menu-lateral">
+        <div class="btn-expandir" id="btn-exp">
+            <button onclick="animar()" id="btn-menu">
+                <span class="linha"></span>
+                <span class="linha"></span>
+                <span class="linha"></span>
+            </button>
+        </div>
+
+            <div>
+                <br>
+                <input type="checkbox" id="ativar-checkbox">
+                <label for="ativar-checkbox" id="ativar"><img class="card-menu" src="img-menu/Sol.jpg" alt="sol" height="100px"  width="278px"></label>
+                <div id="modal">
+                    <h1>Sol☀️</h1>
+                    <br>
+                    <p>O Sol é uma estrela brilhante e quente que fornece luz e calor para a Terra. Com uma temperatura de superfície de 5.500 graus Celsius e idade de cerca de 4,6 bilhões de anos, é a fonte de energia fundamental para a vida em nosso planeta.</p>
+                    <p>Além de iluminar nossos dias e sustentar a fotossíntese das plantas, o Sol influencia nosso clima e clima espacial. </p>
+                    <p> Suas atividades magnéticas, manifestadas em ciclos solares de aproximadamente 11 anos, podem afetar as comunicações via satélite e até mesmo o clima terrestre.</p>
+                    <img src="https://i.gifer.com/origin/ea/eaf933959d3986c6aac35647c7cb9e74_w200.gif" alt="Sol" width="200px">
+                    <br>
+                    <h3>Em resumo, o Sol é muito mais do que apenas uma estrela no céu - é a fonte de vida e energia para toda a Terra.</h3>
+                </div>
+            </div>
+
+
+
+
+                <div>
+                    <input type="checkbox" id="ativar-checkbox-mercurio">
+                    <label for="ativar-checkbox-mercurio" id="ativar-mercurio"><img class="card-menu" src="img-menu/Mercurio.jpg" height="100px"  width="278px" max-width="10px"></label>
+                    <div id="modal-mercurio">
+                        <h1>Mercúrio</h1>
+                        <br>
+                        <ul>
+                            <li>Planeta mais próximo do Sol.</li>
+                            <li>Órbita curta de aproximadamente 88 dias terrestres.</li>
+                            <li>Temperaturas extremas, com picos de calor superiores a 400 graus Celsius.</li>
+                            <li>Superfície marcada por crateras, penhascos e planícies antigas.</li>
+                            <li>Possui uma rotação peculiar, com um dia solar durando cerca de 176 dias terrestres.</li>
+                          </ul>
+                        <br>
+                          
+                        <img src="https://i.pinimg.com/originals/f4/0e/12/f40e12a3f587bfcaa941c8d3b136cec7.gif" alt="Mercúrio" height="100px"  width="auto"">
+                        <br>
+                        <h3>Mercúrio, o planeta mais próximo do Sol, desafia com suas temperaturas extremas e revela segredos sobre os primórdios do nosso sistema solar.</h3>
+                    </div>
+                </div>
+                
+                
+                <div>
+                    <input type="checkbox" id="ativar-checkbox-venus">
+                <label for="ativar-checkbox-venus" id="ativar-venus"><img class="card-menu" src="img-menu/Venus.jpg" alt="venus height="100px"  width="279px"></label>
+                    <div id="modal-venus">
+                        <h1>Vênus</h1>
+                        <br>
+                        <ul>
+                            <li>Segundo planeta do sistema solar.</li>
+                            <li>Atmosfera densa composta principalmente por dióxido de carbono.</li>
+                            <li>Temperaturas superficiais extremamente elevadas, suficientes para derreter chumbo.</li>
+                            <li>Rotaciona na direção oposta à maioria dos outros planetas.</li>
+                            <li>Ausência de luas conhecidas.</li>
+                          </ul>
+                          <br>
+                        <img src="https://i.pinimg.com/originals/38/50/c6/3850c6da1fd79b9c14d699d03e5f6fbf.gif" alt="Vênus" width="200px">
+                        <br>
+                        <h3>Vênus, o brilhante planeta irmão da Terra, esconde mistérios sob suas densas nuvens e nos lembra da delicada dança entre atmosfera e clima.</h3>
+
+                    </div>
+                </div>
+        
+
+
+
+                <div>
+            <input type="checkbox" id="ativar-checkbox-terra">
+            <label for="ativar-checkbox-terra" id="ativar-terra"><img  class="card-menu" src="img-menu/Terra.jpg" alt="terra" height="100px"  width="279px"></label>
+            <div id="modal-terra">
+                <h1>Terra 🌎</h1>
+                <br>
+                <ul>
+                    <li>Terceiro planeta do sistema solar e único comprovadamente habitado.</li>
+                    <li>Cobertura de aproximadamente 71% de água líquida em sua superfície.</li>
+                    <li>Atmosfera composta principalmente por nitrogênio e oxigênio, essencial para a vida.</li>
+                    <li>Possui uma grande diversidade de ecossistemas e uma variedade impressionante de vida.</li>
+                  </ul>
+                  <br>
+                <img src="https://www.uninter.com/noticias/wp-content/uploads/2021/10/noticias_earth-planet.gif" alt="Terra" width="200px">
+                <br>
+                <h3>A Terra, nosso lar azul, é um oásis de vida em meio ao vasto cosmos, onde cada ecossistema conta uma história de resiliência e interconexão.</h3>
+            </div>
+        </div>
+        
+
+
+
+        <div>
+            <input type="checkbox" id="ativar-checkbox-marte">
+            <label for="ativar-checkbox-marte" id="ativar-marte"><img  class="card-menu" src="img-menu/Marte.jpg" alt="" height="100px"  width="auto"></label>
+            <div id="modal-marte">
+                <h1>Marte</h1>
+                <br>
+                <ul>
+                    <li>Quarto planeta do sistema solar, frequentemente chamado de "planeta vermelho".</li>
+                    <li>Atmosfera fina composta principalmente por dióxido de carbono.</li>
+                    <li>Características geológicas semelhantes à Terra, incluindo vulcões, vales e calotas polares.</li>
+                    <li>Presença de água congelada e evidências de água líquida no passado.</li>
+                    <li>Alvo de estudos sobre a possibilidade de vida microbiana.</li>
+                  </ul>
+                  <br>
+                
+                <img src="https://pa1.aminoapps.com/6513/925d5692f8fe95ac2f463bc5d9e4abcc910a8ddf_00.gif" alt="Marte" width="200px">
+                <br>
+                <h3>Marte, o planeta vermelho, desperta nossa imaginação e curiosidade, oferecendo vislumbres de um possível futuro interplanetário e lições sobre a busca pela vida.</h3>
+                </div>
+        </div>
+        
+
+
+
+        <div>
+            <input type="checkbox" id="ativar-checkbox-jupiter">
+            <label for="ativar-checkbox-jupiter" id="ativar-jupiter"><img class="card-menu" src="img-menu/Jupiter.jpg" alt="" height="100px"  width="auto"></label>
+            <div id="modal-jupiter">
+                <h1>Júpiter</h1>
+                <br>
+                <ul>
+                    <li>Maior planeta do sistema solar, conhecido como um "gigante gasoso".</li>
+                    <li>Atmosfera composta principalmente por hidrogênio e hélio.</li>
+                    <li>Possui uma Grande Mancha Vermelha, uma tempestade antiga e persistente.</li>
+                    <li>Mais de 75 luas conhecidas, incluindo as quatro luas galileanas: Io, Europa, Ganimedes e Calisto.</li>
+                    <li>Importante papel na proteção do sistema solar interno contra impactos de asteroides.</li>
+                  </ul>
+                  <br>
+                <img src="https://vcresearch.berkeley.edu/sites/default/files/inline-images/jupanimation750px.gif" alt="" width="200px">
+                <br>
+                <h3>Júpiter, o gigante gasoso, reina supremo no sistema solar, inspirando admiração com suas tempestades furiosas e seu papel protetor contra ameaças cósmicas.</h3>
+            </div>
+        </div>
+        
+
+
+
+
+
+        <div>
+            <input type="checkbox" id="ativar-checkbox-saturno">
+            <label for="ativar-checkbox-saturno" id="ativar-saturno"><img class="card-menu" src="img-menu/Saturno.jpg" alt="saturno" height="100px"  width="auto"></label>
+            <div id="modal-saturno">
+                <h1>Saturno</h1>
+                <br>
+                <ul>
+                    <li>Sexto planeta do sistema solar, conhecido por seus impressionantes anéis.</li>
+                    <li>Tem uma densa atmosfera composta principalmente por hidrogênio e hélio.</li>
+                    <li>Seus anéis são compostos principalmente de gelo, poeira e pequenos fragmentos rochosos.</li>
+                    <li>Tem uma variedade de luas, sendo Titã a maior delas, com uma atmosfera densa e lagos de metano e etano em sua superfície.</li>
+                </ul>
+                <br>
+                <img src="https://media.giphy.com/media/3o7buctjKD8g5r4544/giphy.gif" alt="Saturno" width="200px">
+                <br>
+                <h3>Saturno, o senhor dos anéis, é uma obra-prima cósmica que nos lembra da beleza e grandiosidade do universo, enquanto nos ensina sobre os mistérios da formação planetária.</h3>
+            </div>
+        </div>
+        
+
+
+
+
+        <div>
+            <input type="checkbox" id="ativar-checkbox-urano">
+            <label for="ativar-checkbox-urano" id="ativar-urano"><img class="card-menu" src="img-menu/Urano.jpg" alt="urano" height="100px"  width="auto"></label>
+            <div id="modal-urano">
+                <h1>Urano</h1>
+                <br>
+                <ul>
+                    <li>Sétimo planeta do sistema solar, conhecido por sua inclinação axial extrema.</li>
+                    <li>Tem uma atmosfera composta principalmente por hidrogênio e hélio, mas também contém metano, que dá sua cor azul característica.</li>
+                    <li>Urano é único entre os planetas por girar de lado, com seus polos apontando na direção do Sol em vez de ao longo do plano orbital.</li>
+                    <li>Possui um sistema de anéis, embora muito menos impressionante do que os de Saturno.</li>
+                </ul>
+                <br>
+                <img src="https://stories.cnnbrasil.com.br/wp-content/uploads/sites/9/2023/04/a729f99ef86986a2b1805b1be72c41c4.gif" alt="Urano" width="200px">
+                <br>
+                <h3>Urano, o planeta inclinado, desafia nossa compreensão do sistema solar e nos lembra da complexidade e diversidade dos mundos que habitam nosso cosmos.</h3>
+            </div>
+        </div>
+        
+
+
+
+
+        <div>
+            <input type="checkbox" id="ativar-checkbox-netuno">
+            <label for="ativar-checkbox-netuno" id="ativar-netuno"><img class="card-menu" src="img-menu/Netuno.jpg" alt="netuno" height="100px"  width="auto"></label>
+            <div id="modal-netuno">
+                <h1>Netuno</h1>
+                <br>
+                <ul>
+                    <li>Oitavo e último planeta do sistema solar, descoberto em 1846.</li>
+                    <li>Tem uma atmosfera composta principalmente por hidrogênio, hélio e metano, que dá sua cor azulada.</li>
+                    <li>Netuno possui ventos atmosféricos extremamente velozes, com algumas rajadas alcançando velocidades superiores a 2.000 km/h.</li>
+                    <li>Tem uma grande lua, Tritão, que orbita em direção contrária à rotação de Netuno e provavelmente é um objeto capturado de fora do sistema solar.</li>
+                </ul>
+                <br>
+                <img src="https://pa1.aminoapps.com/6780/ec78d99732490d473e96da3a183bdb5ff03de828_00.gif" alt="Netuno" width="200px">
+                <br>
+                <h3>Netuno, o planeta azul profundo, é um mundo misterioso e distante que nos intriga com seus ventos velozes e suas luas peculiares, revelando segredos do extremo limite do nosso sistema solar.</h3>
+            </div>
+        </div>
+
+    </nav>
+        <div class="sistema-solar">
+            <div class="sol">
+                <div class="mercurio"></div>
+                <div class="venus"></div>
+                <div class="terra"></div>
+                <div class="marte"></div>
+                <div class="jupiter"></div>
+                <div class="saturno"></div>
+                <div class="urano"></div>
+                <div class="netuno"></div>
+            </div>
+        </div>
+        <div class="abc"></div>
+        <div class="feito-por">
+            <h1>Feito por:</h1>
+                <div class="informacoes">
+                    <a href="https://github.com/ArthurCorreia213"><p>Arthur Correia</p></a>
+                    <a href="https://github.com/GBTorto"><p>Gabriel Morais Silva</p></a>
+                    <a href="https://github.com/Matt-ags"><p>Mateus Abner</p></a>
+                </div>
+        </div>
+
+        <footer  class="rodape">
+                <div class="fundo">
+                    <br>
+                    <Div><H2>Sistema Solar - 2024</h2></div>
+                    <br>
+                    <div><h3>São Paulo - SP</h3></div>
+                    <br>
+                    <h4>SENAI MORVAN FIGUEIREDO</h4>
+                    <br>
+                </div>
+        </footer>
+
+<!-- parte para colocar animações e decorações: -->
+
+    <div class="decoracoes">
+        <div class="et">
+            <img src="https://pm1.aminoapps.com/7454/1f359fc9609808f5cd4e18f5ff544d5b88ea0e86r1-477-480v2_00.jpg" width="100px" alt="et" title="Busquem conhecimento">
+            <div class="texto-overlay">
+                Só peço que... 
+                <br> 
+                Busquem conhecimento.
+            </div>
+        </div>
+        <div class="nave">
+            <img src="img/wars.png" alt="star-wars" width="150px">
+        </div>
+    </div>
+    <script>
+        function animar(){
+            const clicar = document.getElementById('btn-menu')
+            clicar.classList.toggle('ativar')
+        }
+    </script>
+    <script>
+        var menuItem = document.querySelectorAll('.item-menu')
+        function selectLink(){
+            menuItem.forEach((item)=>
+            item.classList.remove('ativo')
+        )
+        this.classList.add('ativo')
+        }
+        menuItem.forEach((item)=>
+        item.addEventListener('click', selectLink)
+    )
+    </script>
+    <script>
+        var btnExp = document.querySelector('#btn-exp')
+        var menuSide = document.querySelector('.menu-lateral')
+
+        btnExp.addEventListener('click', function(){
+            menuSide.classList.toggle('expandir')
+        })
+    </script> 
+
+</body>
+</html>
